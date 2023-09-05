@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,97 +14,115 @@
             padding: 0;
             margin: 0;
             font-size: 12px;
-            color: rgb(255, 255, 255);
-            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            font-family: "Roboto", sans-serif
         }
+
         body {
             display: grid;
             min-height: 100vh;
             background-image: url(./resources/img/cover.JPG);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: center
         }
+
+        .blur,
+        .container {
+            align-items: center;
+            justify-content: center
+        }
+
         .blur {
-            background: rgba(0,0,0,0.75);
+            background: rgba(0, 0, 0, .75);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex
         }
-        .container{
+
+        .container {
             margin: 2rem;
             overflow: hidden;
             border-radius: 1rem;
             min-width: 300px;
             max-width: 960px;
             display: grid;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
+            text-align: center
         }
-        .coverAlbum{
+
+        .coverAlbum {
             aspect-ratio: 1/1;
-            width: 100%;
+            width: 100%
         }
+
+        .areaOptions,
         .detalles {
-            display: grid;
+            height: 5rem;
+            display: grid
+        }
+
+        .detalles {
             align-content: space-around;
-            background-color: hsl(210, 75%, 33%);
-            height: 5rem;
+            background-color: #155493
         }
+
         .areaOptions {
-            background-color: hsl(0, 0%, 100%);
-            height: 5rem;
-            border-bottom: solid hsl(0, 0%, 90%);
+            background-color: #fff;
+            border-bottom: solid #e6e6e6;
             padding: .5rem;
-            display: grid;
             grid-template-columns: 1fr 33%;
-            align-items: center;
+            align-items: center
         }
+
         .centrarLogo {
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center
         }
+
         .logo_p {
-            max-height: 2.5rem;
+            max-height: 2.5rem
         }
+
         .botonIr {
-            border: none;
+            border: 0;
             font-size: .75rem;
             margin-right: 1.5rem;
             height: 100%;
             border-radius: 1rem;
-            background-color: hsl(210, 75%, 75%);
+            background-color: #8fbfef
         }
+
         .siguenos {
-            padding: 1rem;
-            padding-bottom: 2rem;
-            background-color: rgba(0,0,0,0.9);
+            padding: 1rem 1rem 2rem;
+            background-color: rgba(0, 0, 0, .9);
             display: grid;
             gap: 1.5rem;
             justify-items: center;
-            align-items: center;
+            align-items: center
         }
+
         .redesLogo {
             max-height: 3rem;
-            margin: auto 1.5rem;
+            margin: auto 1.5rem
         }
-        @media only screen and (min-width: 767px) {
+
+        @media only screen and (min-width:767px) {
             .container {
                 display: grid;
                 gap: 2rem;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr
             }
-            .plataformas, .coverAlbum{
+
+            .coverAlbum,
+            .plataformas {
                 border-radius: 1rem;
-                overflow: hidden;
+                overflow: hidden
             }
         }
     </style>
 </head>
+
 <body>
     <div class="blur">
         <div class="container">
@@ -162,11 +181,16 @@
         <img class="logo_camaleon" src="./resources/logos/camaleonVerdeLogo.png" alt="" style="max-height: 6rem;">
         <h2 style="font-weight: 500; font-size: 1.25rem;">--- Siguenos en nuestras redes sociales ---</h2>
         <div class="redesSociales">
-            <a href="https://www.facebook.com/profile.php?id=100094897604685&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/facebook-logo-2021.svg"></a>
-            <a href="https://instagram.com/averos_official?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/instagram_logo.png"></a>
-            <a href="https://youtube.com/@averos1112?si=43Li5K2Vd1uA2nEG" target="_blank" rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/youtube-logo-png-46031.png"></a>
-            <a href="https://www.tiktok.com/@averos1112?_t=8fNz2VZkycc&_r=1" target="_blank" rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/tiktok.png"></a>
+            <a href="https://www.facebook.com/profile.php?id=100094897604685&mibextid=LQQJ4d" target="_blank"
+                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/facebook-logo-2021.svg"></a>
+            <a href="https://instagram.com/averos_official?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/instagram_logo.png"></a>
+            <a href="https://youtube.com/@averos1112?si=43Li5K2Vd1uA2nEG" target="_blank" rel="noopener noreferrer"><img
+                    class="redesLogo" src="./resources/logos/youtube-logo-png-46031.png"></a>
+            <a href="https://www.tiktok.com/@averos1112?_t=8fNz2VZkycc&_r=1" target="_blank"
+                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/tiktok.png"></a>
         </div>
     </div>
 </body>
+
 </html>
