@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Averos :: Emergentes</title>
     <style>
         * {
@@ -46,8 +47,12 @@
             border-radius: 1rem;
             min-width: 300px;
             max-width: 960px;
-            display: grid;
             text-align: center
+        }
+
+        .container,
+        .topSide {
+            display: grid
         }
 
         .coverAlbum {
@@ -59,6 +64,28 @@
         .detalles {
             height: 5rem;
             display: grid
+        }
+
+        #boxMusic,
+        .musicSampleHidden {
+            display: none
+        }
+
+        .musicData {
+            display: grid;
+            gap: 1rem
+        }
+
+        .proximamente {
+            padding: 3rem;
+            background-color: rgba(0, 0, 0, .75)
+        }
+
+        #boxMusic {
+            background-color: rgba(0, 0, 0, .5);
+            grid-template-columns: 20% 1fr;
+            align-items: center;
+            padding: 1rem
         }
 
         .detalles {
@@ -107,15 +134,16 @@
             margin: auto 1.5rem
         }
 
-        @media only screen and (min-width:767px) {
+        @media only screen and (min-width:600px) {
             .container {
                 display: grid;
                 gap: 2rem;
                 grid-template-columns: 1fr 1fr
             }
 
+            .contenido,
             .coverAlbum,
-            .plataformas {
+            .proximamente {
                 border-radius: 1rem;
                 overflow: hidden
             }
@@ -126,8 +154,26 @@
 <body>
     <div class="blur">
         <div class="container">
-            <img class="coverAlbum" src="./resources/img/cover.JPG" alt="">
-            <div class="plataformas">
+            <div class="leftSide topSide">
+                <img class="coverAlbum" src="./resources/img/cover.JPG" alt="">
+                <div class="proximamente">
+                    <h1 style="font-weight: 500; font-size: 1.25rem;">Previa musical, muy pronto!!!</h1>
+                </div>
+                <div class="musicSampleHidden">
+                    <audio controls>
+                        <source src="./resources/music/sample1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div id="boxMusic">
+                    <div onclick="playPause()"><i class="fa fa-play-circle" style="font-size: 50px;"></i></div>
+                    <div class="musicData">
+                        <h1 class="primeraLinea">AddiSonG</h1>
+                        <p class="cancionNombre">Ser Un Niño Otra Vez</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contenido">
                 <div class="detalles">
                     <h1 class="tituloAlbum" style="font-weight: 500; font-size: 1.25rem;">Averos - Emergentes</h1>
                     <p style="font-weight: 300; font-size: 1.15rem;">Elige tu plataforma preferida:</p>
@@ -183,14 +229,17 @@
         <div class="redesSociales">
             <a href="https://www.facebook.com/profile.php?id=100094897604685" target="_blank"
                 rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/facebook-logo-2021.svg"></a>
-            <a href="https://instagram.com/averos_official" target="_blank"
-                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/instagram_logo.png"></a>
-            <a href="https://youtube.com/@averos1112" target="_blank" rel="noopener noreferrer"><img
-                    class="redesLogo" src="./resources/logos/youtube-logo-png-46031.png"></a>
-            <a href="https://www.tiktok.com/@averos1112" target="_blank"
-                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/tiktok.png"></a>
+            <a href="https://instagram.com/averos_official" target="_blank" rel="noopener noreferrer"><img
+                    class="redesLogo" src="./resources/logos/instagram_logo.png"></a>
+            <a href="https://youtube.com/@averos1112" target="_blank" rel="noopener noreferrer"><img class="redesLogo"
+                    src="./resources/logos/youtube-logo-png-46031.png"></a>
+            <a href="https://www.tiktok.com/@averos1112" target="_blank" rel="noopener noreferrer"><img
+                    class="redesLogo" src="./resources/logos/tiktok.png"></a>
         </div>
     </div>
 </body>
+<script>
+
+</script>
 
 </html>
