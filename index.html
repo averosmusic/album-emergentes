@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto Musical :: AVEROS :: Emergentes :: 2023">
+    <meta name="keywords" content="Proyecto Musical, AVEROS, Emergentes">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -12,20 +15,49 @@
     <style>
         * {
             box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            font-size: 12px;
             color: #fff;
-            font-family: "Roboto", sans-serif
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0
         }
 
         body {
-            display: grid;
-            min-height: 100vh;
             background-image: url(./resources/img/cover.JPG);
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center
+            display: grid;
+            min-height: 100vh
+        }
+
+        #boxMusic {
+            align-items: center;
+            border-radius: 1rem;
+            grid-template-columns: 20% 1fr;
+            padding: 1rem
+        }
+
+        #boxMusic,
+        .detalles {
+            background-color: rgba(200, 200, 200, .16);
+            display: grid
+        }
+
+        .areaOptions {
+            align-items: center;
+            background-color: rgba(200, 200, 200, .33);
+            display: grid;
+            grid-template-columns: 1fr 33%;
+            height: 5rem;
+            padding: .75rem
+        }
+
+        .blur {
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(0, 0, 0, .75);
+            display: flex
         }
 
         .blur,
@@ -34,19 +66,30 @@
             justify-content: center
         }
 
-        .blur {
-            background: rgba(0, 0, 0, .75);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            backdrop-filter: saturate(180%) blur(20px);
-            display: flex
+        .botonIr {
+            border-radius: 1rem;
+            border: 0;
+            font-size: .75rem;
+            height: 100%;
+            margin-right: 1.5rem;
+            opacity: 25%
+        }
+
+        .botonIr,
+        .footer {
+            background-color: #000
+        }
+
+        .centrarLogo {
+            display: flex;
+            justify-content: center;
+            width: 100%
         }
 
         .container {
             margin: 2rem;
-            overflow: hidden;
-            border-radius: 1rem;
-            min-width: 300px;
             max-width: 960px;
+            min-width: 300px;
             text-align: center
         }
 
@@ -55,20 +98,25 @@
             display: grid
         }
 
+        .contenido {
+            border-radius: 1rem;
+            margin: 1rem 0;
+            overflow: hidden
+        }
+
         .coverAlbum {
             aspect-ratio: 1/1;
             width: 100%
         }
 
-        .areaOptions,
         .detalles {
-            height: 5rem;
-            display: grid
+            align-content: space-around;
+            height: 5rem
         }
 
-        #boxMusic,
-        .musicSampleHidden {
-            display: none
+        .logo_p,
+        .redesLogo {
+            max-height: 2.5rem
         }
 
         .musicData {
@@ -76,76 +124,31 @@
             gap: 1rem
         }
 
-        .proximamente {
-            padding: 3rem;
-            background-color: rgba(0, 0, 0, .75)
-        }
-
-        #boxMusic {
-            background-color: rgba(0, 0, 0, .5);
-            grid-template-columns: 20% 1fr;
-            align-items: center;
-            padding: 1rem
-        }
-
-        .detalles {
-            align-content: space-around;
-            background-color: #155493
-        }
-
-        .areaOptions {
-            background-color: #fff;
-            border-bottom: solid #e6e6e6;
-            padding: .5rem;
-            grid-template-columns: 1fr 33%;
-            align-items: center
-        }
-
-        .centrarLogo {
-            width: 100%;
-            display: flex;
-            justify-content: center
-        }
-
-        .logo_p {
-            max-height: 2.5rem
-        }
-
-        .botonIr {
-            border: 0;
-            font-size: .75rem;
-            margin-right: 1.5rem;
-            height: 100%;
-            border-radius: 1rem;
-            background-color: #8fbfef
-        }
-
-        .siguenos {
-            padding: 1rem 1rem 2rem;
-            background-color: rgba(0, 0, 0, .9);
-            display: grid;
-            gap: 1.5rem;
-            justify-items: center;
-            align-items: center
+        .musicSampleHidden {
+            display: none
         }
 
         .redesLogo {
-            max-height: 3rem;
             margin: auto 1.5rem
         }
 
+        .footer {
+            align-items: center;
+            display: grid;
+            gap: 1.5rem;
+            justify-items: center;
+            padding: 1rem 1rem 2rem
+        }
+
         @media only screen and (min-width:600px) {
+            #boxMusic {
+                margin-top: 1rem
+            }
+
             .container {
                 display: grid;
                 gap: 2rem;
                 grid-template-columns: 1fr 1fr
-            }
-
-            .contenido,
-            .coverAlbum,
-            .proximamente {
-                border-radius: 1rem;
-                overflow: hidden
             }
         }
     </style>
@@ -155,17 +158,15 @@
     <div class="blur">
         <div class="container">
             <div class="leftSide topSide">
-                <img class="coverAlbum" src="./resources/img/cover.JPG" alt="">
-                <div class="proximamente">
-                    <h1 style="font-weight: 500; font-size: 1.25rem;">Previa musical, muy pronto!!!</h1>
-                </div>
+                <img class="coverAlbum" src="./resources/img/cover.JPG">
                 <div class="musicSampleHidden">
-                    <audio controls>
+                    <audio controls id="musica">
                         <source src="./resources/music/sample1.mp3" type="audio/mp3">
                     </audio>
                 </div>
                 <div id="boxMusic">
-                    <div onclick="playPause()"><i class="fa fa-play-circle" style="font-size: 50px;"></i></div>
+                    <div onclick="playPause()"><i class="fa fa-play-circle" style="font-size: 50px;"
+                            id="botonDePlay"></i></div>
                     <div class="musicData">
                         <h1 class="primeraLinea">AddiSonG</h1>
                         <p class="cancionNombre">Ser Un Niño Otra Vez</p>
@@ -186,7 +187,7 @@
                 </div>
                 <div class="areaOptions">
                     <div class="centrarLogo">
-                        <img class="logo_p" src="./resources/logos/music-service_youtube.webp" alt="">
+                        <img class="logo_p" src="./resources/logos/music-service_youtube.svg" alt="">
                     </div>
                     <button class="botonIr">Próximamente</button>
                 </div>
@@ -223,23 +224,35 @@
             </div>
         </div>
     </div>
-    <div class="siguenos">
+    <div class="footer">
         <img class="logo_camaleon" src="./resources/logos/camaleonVerdeLogo.png" alt="" style="max-height: 6rem;">
         <h2 style="font-weight: 500; font-size: 1.25rem;">--- Siguenos en nuestras redes sociales ---</h2>
         <div class="redesSociales">
             <a href="https://www.facebook.com/profile.php?id=100094897604685" target="_blank"
-                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/facebook-logo-2021.svg"></a>
+                rel="noopener noreferrer"><img class="redesLogo" src="./resources/logos/facebook_logo.png"></a>
             <a href="https://instagram.com/averos_official" target="_blank" rel="noopener noreferrer"><img
                     class="redesLogo" src="./resources/logos/instagram_logo.png"></a>
             <a href="https://youtube.com/@averos1112" target="_blank" rel="noopener noreferrer"><img class="redesLogo"
-                    src="./resources/logos/youtube-logo-png-46031.png"></a>
+                    src="./resources/logos/youtube_logo.png"></a>
             <a href="https://www.tiktok.com/@averos1112" target="_blank" rel="noopener noreferrer"><img
-                    class="redesLogo" src="./resources/logos/tiktok.png"></a>
+                    class="redesLogo" src="./resources/logos/tiktok_logo.png"></a>
         </div>
     </div>
 </body>
 <script>
+    let reproducir = document.getElementById('botonDePlay')
 
+    function playPause() {
+        if (botonDePlay.classList.contains("fa-pause-circle")) {
+            musica.pause()
+            botonDePlay.classList.remove("fa-pause-circle")
+            botonDePlay.classList.add("fa-play-circle")
+        } else {
+            musica.play()
+            botonDePlay.classList.remove("fa-play-circle")
+            botonDePlay.classList.add("fa-pause-circle")
+        }
+    }
 </script>
 
 </html>
