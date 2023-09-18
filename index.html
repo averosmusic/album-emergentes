@@ -76,7 +76,7 @@
         }
 
         .botonIr,
-        .footer {
+        .footer1 {
             background-color: #000
         }
 
@@ -132,7 +132,7 @@
             margin: auto 1.5rem
         }
 
-        .footer {
+        .footer1 {
             align-items: center;
             display: grid;
             gap: 1.5rem;
@@ -224,7 +224,8 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer1
+    ">
         <img class="logo_camaleon" src="./resources/logos/camaleonVerdeLogo.png" alt="" style="max-height: 6rem;">
         <h2 style="font-weight: 500; font-size: 1.25rem;">--- Siguenos en nuestras redes sociales ---</h2>
         <div class="redesSociales">
@@ -244,15 +245,20 @@
 
     function playPause() {
         if (botonDePlay.classList.contains("fa-pause-circle")) {
-            musica.pause()
-            botonDePlay.classList.remove("fa-pause-circle")
-            botonDePlay.classList.add("fa-play-circle")
+            musica.pause();
+            botonDePlay.classList.remove("fa-pause-circle");
+            botonDePlay.classList.add("fa-play-circle");
         } else {
-            musica.play()
-            botonDePlay.classList.remove("fa-play-circle")
-            botonDePlay.classList.add("fa-pause-circle")
+            musica.play();
+            botonDePlay.classList.remove("fa-play-circle");
+            botonDePlay.classList.add("fa-pause-circle");
         }
     }
+    musica.addEventListener("ended", function () {
+        botonDePlay.classList.remove("fa-pause-circle");
+        botonDePlay.classList.add("fa-play-circle");
+    });
+
 </script>
 
 </html>
