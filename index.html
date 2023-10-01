@@ -62,7 +62,8 @@
         }
 
         .detalles {
-            display: grid
+            display: grid;
+            padding: .5rem;
         }
 
         #boxMusic,
@@ -92,12 +93,20 @@
         }
 
         .botonIr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
             border-radius: 1rem;
             border: 0;
             font-size: .75rem;
             height: 100%;
             margin-right: 1.5rem;
             opacity: 25%
+        }
+
+        .disponibleYa{
+            opacity: 100%;
         }
 
         .botonIr,
@@ -201,24 +210,30 @@
                     <div onclick="playPause()"><i class="fa fa-play-circle" style="font-size: 50px;"
                             id="botonDePlay"></i></div>
                     <div class="musicData">
-                        <h1 class="primeraLinea">AddiSonG</h1>
+                        <h1 class="primeraLinea">Averos Music, AddiSonG</h1>
                         <p class="cancionNombre">Ser Un Niño Otra Vez</p>
                     </div>
                 </div>
                 <div class="detalles">
-                    <p style="font-weight: 300; font-size: 1.15rem;">Lanzamiento oficial en Octubre:</p>
+                    <p>Octubre 1, 2023 / 00:00 ET - Ser Un Niño Otra Vez (feat. AddiSonG):</p>
                 </div>
                 <div class="areaOptions">
                     <div class="centrarLogo">
                         <img class="logo_p" src="./resources/logos/music-service_spotify.webp" alt="">
                     </div>
-                    <button class="botonIr">Muy pronto</button>
+                    <a href="https://open.spotify.com/album/2aNcEZSbpNSylzpE1WuRFD" target="_blank" rel="noopener noreferrer" class="botonIr disponibleYa">Escuchar</a>
                 </div>
                 <div class="areaOptions">
                     <div class="centrarLogo">
                         <img class="logo_p" src="./resources/logos/music-service_youtube.svg" alt="">
                     </div>
-                    <button class="botonIr">Muy pronto</button>
+                    <a href="https://music.youtube.com/channel/UCFSM4KYGPPjylWwDlBGEqOA?si=nNNl1cKEEpQGB5G2" target="_blank" rel="noopener noreferrer" class="botonIr disponibleYa">Escuchar</a>
+                </div>
+                <div class="areaOptions">
+                    <div class="centrarLogo">
+                        <img class="logo_p" src="./resources/logos/music-service_tidal.webp" alt="">
+                    </div>
+                    <a href="https://tidal.com/browse/album/317801803" target="_blank" rel="noopener noreferrer" class="botonIr disponibleYa">Escuchar</a>
                 </div>
                 <div class="areaOptions">
                     <div class="centrarLogo">
@@ -244,11 +259,8 @@
                     </div>
                     <button class="botonIr">Muy pronto</button>
                 </div>
-                <div class="areaOptions">
-                    <div class="centrarLogo">
-                        <img class="logo_p" src="./resources/logos/music-service_tidal.webp" alt="">
-                    </div>
-                    <button class="botonIr">Muy pronto</button>
+                <div class="detalles mensajeSentimos">
+                    <p>Estamos trabajando con las demas plataformas de momento</p>
                 </div>
             </div>
         </div>
